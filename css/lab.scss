@@ -1,0 +1,127 @@
+@import '_common';
+@media (min-width:$mobile) and (max-width:$tablet){
+    .visual{
+        position: relative;
+        height: 25vh;
+        
+        >div{
+            position: absolute;
+            left:0; top:0;
+            width:100%;
+
+            @include flex(center, center, column, nowrap);
+
+        }
+        >img{width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+    }
+
+    .visual_wrap{
+        background-color:#fff;
+        padding:120px 0 30px 0;
+        text-align: center;
+        
+        .visual_text{
+            font-size: 12px;
+            line-height: 1.8;
+            text-align: center;
+            color: #000;
+        h2{
+            line-height: 1.5;
+            font-size: 24px;
+            span{color: #fed136;}
+            }
+        }
+        .Lab_slide{
+            transform: translateY(50px);
+            opacity: 0;
+            animation: txtup 0.8s forwards;
+        ul{
+            overflow: hidden;
+            width:90%;
+            margin:30px auto;
+            @include flex(space-between, stretch, column, wrap);
+            li{
+                width:100%; margin-bottom: 5%;
+                .list_box_img{
+                    margin: 10px 0;
+                    width: 100%;
+                    height: auto;
+                        .list_img{
+                            width: 100%;
+                            img{
+                                width: 100%;
+                                transform: scale(1.3);
+                                height: auto;
+                                filter: brightness(0.5);
+                                }
+                        }
+
+                    }
+                .list_txt{
+                    font-family: 'NanumSquareRound';
+                    .title{
+                        margin-top: 20px;
+                        font-weight: normal;
+                        line-height: 25px;
+                        font-size: 12px;
+                        color: #8c8c8c;
+                        font-weight: bold;
+                        text-align: left;
+                        }
+                    .sub{
+                        line-height: 30px;
+                        font-size: 14px;
+                        color: #000;
+                        text-align: left;
+                        font-weight: 600;
+                        margin-top: -5px;
+                        }
+                    }
+                    @keyframes txtup {
+                        to {
+                            transform: translateY(0px);
+                            opacity: 1
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+.load_more_box{
+    width: 100%;
+    height: auto;
+    padding: 45px 0px 0px;
+    text-align: center;
+.show_img{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0px;
+    img{
+        background: url('../img/LOAD-MORE.png');
+        background-size: cover;
+        position: absolute;
+        top: -5px; left: 50%;
+        width: 33px; height: 33px;
+        transform: translate(-50%, 0%);
+    }
+    .title{
+        font-family: 'NanumSquareRound';
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 14px;
+        color: #000;
+        margin-top: 20px;}
+    }
+}
