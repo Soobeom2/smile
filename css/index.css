@@ -383,28 +383,31 @@ footer .footer_info .info_copy {
   .visual_wrap {
     background-color: #fff;
     padding: 120px 0px;
-    margin-left: 5px;
     text-align: center;
   }
-  .visual_wrap .filter {
+  .visual_wrap .filter_wrap {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .visual_wrap .filter_wrap .filter {
     font-family: 'Roboto';
     font-size: 12px;
     width: 100%;
     text-align: left;
-    margin: 0 20px;
+    margin: 0 auto;
   }
-  .visual_wrap .filter img {
+  .visual_wrap .filter_wrap .filter img {
     width: 15px;
     height: 15px;
   }
-  .visual_wrap .filter span {
+  .visual_wrap .filter_wrap .filter span {
     font-weight: bold;
   }
-  .visual_wrap .filter span span {
+  .visual_wrap .filter_wrap .filter span span {
     position: relative;
     color: #6a6a6a;
   }
-  .visual_wrap .filter span ::after {
+  .visual_wrap .filter_wrap .filter span ::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -447,10 +450,6 @@ footer .footer_info .info_copy {
   .visual_wrap ul li {
     width: 100%;
     margin-bottom: 5%;
-  }
-  .visual_wrap ul li a:hover .list_img {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
   }
   .visual_wrap ul li .list_box_img {
     overflow: hidden;
