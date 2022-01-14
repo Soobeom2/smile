@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta property="og:title" content="오픈그래프 테스트">
+    <meta property="og:title" content="옐로우 핑거">
     <meta property="og:url" content="https://soobeom2.github.io/happy/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="img/img_item04.jpg">
-    <meta property="og:site_name" content="golden">
-    <meta property="og:description" content="오픈그래프 테스트 중입니다."> -->
+    <meta property="og:image" content="img/logo_simbol_b.png">
+    <meta property="og:site_name" content="옐로우핑거">
+    <meta property="og:description" content="옐로우핑거 테스트 중입니다.">
 
-    <title>Document</title>
+    <title>소통하며 홈페이지를 제작하는 업체 - 옐로우 핑거 문의하기</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/contact.js"></script>
     <link href="css/contact.css" rel="stylesheet">
-    <!-- <link href="favicon.ico" rel="shortcut icon"> -->
+    <link href="yellowfinger.ico" rel="shortcut icon">
 </head>
 <body>
     <header>
@@ -84,17 +87,17 @@
                     </div>
                     <div class="Contact_item">
                         <ul>
-                            <li>
+                            <li class="item1">
                                 <label>프로젝트명</label>
                                 <p><input type="text" name=""></p>
                             </li>
 
-                            <li>
+                            <li class="item1">
                                 <label>오픈일정</label>
                                 <p><input type="text" name=""></p>
                             </li>
 
-                            <li>
+                            <li class="item1">
                                 <label>프로젝트 예산</label>
                                 <p><input type="text" name=""></p>
                             </li>
@@ -109,11 +112,13 @@
                                 <p><textarea></textarea></p>
                             </li>
 
-                            <div class="filebox">
-                                <label for="file">파일선택</label> 
-                                <input class="upload-name" type="text" placeholder="선택된 파일 없음">
-                                <input type="file" id="file">
+                            <li>
+                                <div class="filebox">
+                                    <label for="file">파일선택</label> 
+                                    <input class="upload-name" type="text" placeholder="선택된 파일 없음">
+                                    <input type="file" id="file">
                             </div>
+                            </li>
                         </ul>
                         
                         </div>
@@ -173,6 +178,7 @@
                                         선택한 후 본인이 등록한 선택적 정보에 대해서는 수집 • 이용에 대해 동의한 것으로 간주합니다.
                                         </div>
                                     
+                                        
                                     <div class="check_in">
                                     <input type="checkbox" name="">
                                     <span>개인정보 수집 및 이용 동의합니다.</span>
@@ -263,27 +269,6 @@
                 </div>
             </div>
 
-            <script>
-                const elHeader = document.querySelector('header')
-                const elHamburger = document.querySelector('header .trigger-menu')
-                const elPopup = document.querySelector('.header_menu_box_btn')
-                let num = 0;
-        
-                elHamburger.onclick = function(){
-        
-                    if(num%2 == 0){
-                        elHeader.classList.add('active');
-                        elPopup.classList.add('active');}
-        
-                        else{
-                        elHeader.classList.remove('active');
-                        elPopup.classList.remove('active');
-                        }
-                        num++;
-                    
-                }
-        
-            </script>
     </footer>
 </body>
 </html>

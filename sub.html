@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta property="og:title" content="오픈그래프 테스트">
+    <meta property="og:title" content="옐로우 핑거">
     <meta property="og:url" content="https://soobeom2.github.io/happy/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="img/img_item04.jpg">
-    <meta property="og:site_name" content="golden">
-    <meta property="og:description" content="오픈그래프 테스트 중입니다."> -->
+    <meta property="og:image" content="img/logo_simbol_b.png">
+    <meta property="og:site_name" content="옐로우핑거">
+    <meta property="og:description" content="옐로우핑거 테스트 중입니다.">
 
-    <title>Document</title>
+    <title>홈페이지 자체제작 전문업체 - 옐로우핑거 소개</title>
     <link href="css/sub.css" rel="stylesheet">
-    <!-- <link href="favicon.ico" rel="shortcut icon"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/sub.js"></script>
+    <link href="yellowfinger.ico" rel="shortcut icon">
 </head>
 <body>
     <header>
@@ -68,7 +71,7 @@
                         <br>
                         <span>전문 디지털 에이전시</span>
                         <br class="type_04">
-                        입니다
+                        입니다.
                     </p>
                         <br>
 						옐로우핑거는 반응형 홈페이지 제작과 
@@ -110,81 +113,7 @@
                     <div class="Team_box_title">
                         Our Team<span>.</span>
                     </div>
-                        <ul>
-                            
-                            <li>
-                                    <div class="list_box_img">
-                                        <div class="list_img">
-                                        <img src="img/member_01.jpg" alt="">
-                                        </div>
-
-                                        <div class="list_txt">
-                                        <p class="title">KIM GUNHO</p>
-                                        <p class="sub">Founder / Developer</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="list_box_img">
-                                        <div class="list_img">
-                                            <img src="img/member_02.jpg" alt="">
-                                        </div>
-
-                                        <div class="list_txt">
-                                        <p class="title">KIM SEMI</p>
-                                        <p class="sub">Director / Designer</p>
-                                        </div>
-                                    </div>
-                            </li>
-
-                            <li>
-                                    <div class="list_box_img">
-                                        <div class="list_img">
-                                            <img src="img/member_03.jpg" alt="">
-                                        </div>
-
-                                        <div class="list_txt">
-                                        <p class="title">OH DASOL</p>
-                                        <p class="sub">Designer</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="list_box_img">
-                                        <div class="list_img">
-                                            <img src="img/member_04.jpg" alt="">
-                                        </div>
-
-                                        <div class="list_txt">
-                                        <p class="title">YANG HUISEONG</p>
-                                        <p class="sub">Back-End Developer</p>
-                                        </div>
-                                    </div>
-                            </li>
-
-                            <li>
-                                <div class="list_box_img">
-                                    <div class="list_img">
-                                        <img src="img/member_05.jpg" alt="">
-                                    </div>
-
-                                    <div class="list_txt">
-                                    <p class="title">LEE DONGHYEON</p>
-                                    <p class="sub">Front-End Developer</p>
-                                    </div>
-                                </div>
-
-                                <div class="list_box_img">
-                                    <div class="list_img">
-                                        <img src="img/member_06.jpg" alt="">
-                                    </div>
-
-                                    <div class="list_txt">
-                                    <p class="title">KIM YOOJEONG</p>
-                                    <p class="sub">Designer</p>
-                                    </div>
-                                </div>
-                        </li>
-
-                        </ul>
+                        <ul></ul>
                 </div>
             </div>
 
@@ -239,27 +168,6 @@
                 </div>
             </div>
 
-            <script>
-                const elHeader = document.querySelector('header')
-                const elHamburger = document.querySelector('header .trigger-menu')
-                const elPopup = document.querySelector('.header_menu_box_btn')
-                let num = 0;
-        
-                elHamburger.onclick = function(){
-        
-                    if(num%2 == 0){
-                        elHeader.classList.add('active');
-                        elPopup.classList.add('active');}
-        
-                        else{
-                        elHeader.classList.remove('active');
-                        elPopup.classList.remove('active');
-                        }
-                        num++;
-                    
-                }
-        
-            </script>
     </footer>
 </body>
 </html>
