@@ -19,6 +19,7 @@
     }
 
     .visual_wrap{
+        font-family: 'NanumSquareRound';
         background-color:#fff;
         padding:120px 0 30px 0;
         text-align: center;
@@ -48,11 +49,9 @@
         }
         .Contact_wrap{
             padding: 30px 15px;
+            margin-top: 30px;
         }
         .Contact_slide{
-            transform: translateY(50px);
-            opacity: 0;
-            animation: txtup 0.8s forwards;
             .Contact_contain{
                 font-weight: bold;
                     .Contact_title{
@@ -68,6 +67,9 @@
             text-align: left;
             @include flex(space-between, stretch, column, wrap);
             li{
+                transform: translateY(50px);
+                opacity: 0;
+                transition: 0.5s;
                 width:100%; margin-bottom: 5%;
                 label{
                     width: 100%; height: auto; line-height: 1;
@@ -129,6 +131,21 @@
                 }
                     
                         }
+                        .item1{
+                            animation: txtup 0.5s forwards;
+                        }
+                        
+                        @keyframes txtup {
+                            to {
+                                transform: translateY(0px);
+                                opacity: 1
+                            }
+                        }
+                        li.active{
+                            transform: translateY(0px);
+                            opacity: 1
+                        }
+                        
                         .filebox 
                         { margin-top: -10px;
                             .upload-name {
@@ -159,9 +176,13 @@
                         }
                     }
                     .Contact_button{
+                        transform: translateY(50px);
+                        opacity: 0;
+                        transition: 0.5s;
                         position: relative;
                         padding: 30px 0;
                         button{
+                            font-family: 'NanumSquareRound';
                             width: 120px;
                             height: 40px;
                             line-height: 38px;
@@ -181,15 +202,13 @@
                             background-color: #40404c;
                         }
                     }
+                    .Contact_button.active{
+                        transform: translateY(0px);
+                        opacity: 1
+                    }
                 }
             }
         }
-        @keyframes txtup {
-            to {
-                transform: translateY(0px);
-                opacity: 1
-                    }
-                }
     }
 
 }
