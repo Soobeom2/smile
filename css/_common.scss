@@ -135,7 +135,8 @@ $p-tb100 : 100px 0;
     width: 100%;
     height: 100%;
     z-index: 19;
-    transition: opacity 1s;
+    animation: opacity_in 0.3s forwards;
+    opacity: 0;
     .btn_bg{
     position: absolute;
     top: 0px;
@@ -184,6 +185,9 @@ $p-tb100 : 100px 0;
         font-family: 'Roboto';
         font-weight: bold;
     }
+}
+@keyframes opacity_in{
+    100%{opacity: 1;}
 }
 .header_menu_box_btn.active{
     display: block;
