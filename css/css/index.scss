@@ -1,0 +1,225 @@
+@import '_common';
+@media (min-width:$mobile) and (max-width:$tablet){
+    .visual{
+        position: relative;
+        height: 30vh;
+        
+        >div{
+            position: absolute;
+            left:0; top:0;
+            width:100%;
+
+            @include flex(center, center, column, nowrap);
+
+        }
+        >img{width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+    }
+
+    .visual_wrap{
+        background-color:#fff;
+        padding:120px 0px;
+        text-align: center;
+        .filter_wrap{
+            width: 90%;
+            margin: 0 auto;
+            animation: txtup 0.3s forwards;
+            transform: translateY(50px);
+            opacity: 0;
+            .filter{
+            font-family: 'Roboto';
+            font-size: 12px;
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+            img{
+                margin-right: 5px;
+                width: 15px; height: 15px;}
+            span{
+                font-weight: bold;
+                span{
+                    font-family: 'NanumSquareRound';
+                    position: relative;
+                    color: #6a6a6a;
+                }
+                ::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #6a6a6a;
+            }
+            }
+        }
+        .filter.active{display: none;}
+        .filter_text{
+            display: flex;
+            display: none;
+            font-family: 'NanumSquareRound';
+            font-size: 12px;
+            width: 100%;
+            text-align: left;
+            margin: 0 auto;
+            .filter_img{
+            img{
+                margin-top: 2px;
+                margin-right: 20px;
+                width: 15px; height: 15px;}
+            }
+            .filter_span{
+                span{
+                    font-weight: bold;
+                    display: inline-block;
+                    position: relative;
+                    color: #6a6a6a;
+                    margin: 0 10px 10px 0;
+                }
+                span:nth-of-type(1)::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #6a6a6a;
+               }
+            }
+        }
+        .filter_text.active{
+            display: inline-block;
+            display: flex;
+        }
+    }
+        .visual_text{
+            font-family: 'NanumSquareRound';
+            font-size: 12px;
+            line-height: 1.8;
+            text-align: center;
+            color: #000;
+        h2{
+            font-size: 24px;
+            span{color: #fed136;}
+            }
+        }
+        ul{
+            width:90%;
+            margin:30px auto;
+            @include flex(space-between, stretch, column, wrap);
+            li{
+                transform: translateY(50px);
+                opacity: 0;
+                transition: 0.5s;
+                width:100%; margin-bottom: 5%;
+                .list_box_img{
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                    .list_img{
+                        position: relative;
+                        width: 100%;
+                        transition: 0.5s;
+                        
+                        img{
+                            width: 100%;
+                            transform: scale(1.2);
+                            opacity: 0;
+                        }                        
+                        
+                        .list_img_bg{
+                            position: absolute;
+                            left: 0; top: 0;
+                            background-color: #fed130;
+                            width: 100%;
+                            height: 0%;
+                            z-index: 10;
+                            opacity: 1;
+                        }
+                        
+                    }
+                }
+                .list_txt{
+                    font-family: 'NanumSquareRound';
+                    transform: translateY(50px);
+                    opacity: 0;
+                    animation: txtup 0.3s forwards;
+                    .title{
+                        margin-top: 10px;
+                        font-weight: normal;
+                        line-height: 25px;
+                        font-size: 12px;
+                        color: #8c8c8c;
+                        text-align: left;
+                        }
+                    .sub{
+                        line-height: 30px;
+                        font-size: 14px;
+                        color: #000;
+                        text-align: left;
+                        font-weight: 600;
+                        }
+                    }
+                &.active{
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                &.active img{ animation: scale1 0.3s 0.5s forwards ; }
+                &.active .list_img_bg{ animation: imgdown 1s ease; }
+
+                @keyframes scale1{
+                    100%{transform: scale(1); opacity: 1;}
+                    
+                }
+                @keyframes imgdown{
+                    30%{height: 100%; opacity:1}
+                    80%,100%{height: 100%; opacity:0}
+                } 
+            }
+            :nth-of-type(1){
+                animation: txtup 0.5s forwards;
+            }
+            @keyframes txtup {
+                to {
+                    transform: translateY(0px);
+                    opacity: 1
+                }
+            }
+        }
+      
+    }
+}
+.load_more_box{
+    width: 100%;
+    height: auto;
+    padding: 45px 0px 0px;
+    text-align: center;
+.show_img{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0px;
+    img{
+        background: url('../img/LOAD-MORE.png');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: -5px; left: 50%;
+        width: 30px; height: 29.5px;
+        transform: translate(-50%, 0%);
+    }
+    .title{
+        font-family: 'NanumSquareRound';
+        font-weight: 600;
+        line-height: 1.5;
+        font-size: 14px;
+        color: #000;
+        margin-top: 20px;}
+    }
+}
+.load_more_box.active{display: none;}
