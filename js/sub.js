@@ -2,7 +2,7 @@ const elUp_Team = document.querySelector('main .Team_box_title')
 const elWrap = document.querySelector('main .Team_box_wrap')
 
 window.addEventListener('scroll',function(){
-            if((elUp_Team.offsetTop + elWrap.offsetTop )- (window.innerHeight*0.8) < window.scrollY){
+            if((elUp_Team.offsetTop + elWrap.offsetTop )- (window.innerHeight*0.8) <= window.scrollY){
                 elUp_Team.classList.add('active')
         }
 })
@@ -35,7 +35,7 @@ let exChange = function(){
                 
                 window.addEventListener('scroll',function(){
                 elUp_li.forEach(function(p){
-                        if((p.offsetTop + elWrap.offsetTop) - (window.innerHeight*0.8) < window.scrollY){
+                        if((p.offsetTop + elWrap.offsetTop) - (window.innerHeight*0.8) <= window.scrollY){
                         p.classList.add('active')
                     }
                 })
