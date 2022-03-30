@@ -116,7 +116,6 @@
                         text-align: left;}
 
                     input[type=checkbox]{
-                        position: relative;
                         width: 20px;
                         height: 20px;
                         line-height: 25px;
@@ -128,11 +127,6 @@
                         font-family: 'IcoFont' !important;
                         line-height: 1;
                         margin-left: 0;
-
-                    }
-                    .checkbox_btn.active{
-                        background : url('../img/check.png');
-                        background-size: cover;
                     }
                 }
                     
